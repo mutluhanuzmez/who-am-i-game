@@ -29,10 +29,11 @@ class Player {
       this.x, this.y,
       TILE_WIDTH, TILE_HEIGHT);
     
-    this.ctx.font = '18px comic sans';
-    this.ctx.fillStyle = 'black';
-    this.ctx.textAlign = 'center';
-    this.ctx.fillText(this.name, this.x + TILE_WIDTH, this.y+20);
+    
+      this.ctx.font = '18px comic sans';
+      this.ctx.fillStyle = 'black';
+      this.ctx.textAlign = 'center';
+      this.ctx.fillText(this.name, this.x + TILE_WIDTH/2, this.y+15);
 
   }
 };
@@ -237,7 +238,7 @@ class App extends Component {
       <div style={{ height: '100%' }}>
         {!this.state.isGameRunning ? (
           <div>
-            <input type="text" onChange={(evt) => this.setState({ name: evt.target.value.substring(0,8).toLowerCase() })} />
+            <input type="text" onChange={(evt) => this.setState({ name: evt.target.value.substring(0,13).toLowerCase() })} />
             <button disabled={!this.state.name} onClick={this.start}>START</button>
           </div>) : null}
 
