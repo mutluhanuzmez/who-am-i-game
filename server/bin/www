@@ -100,8 +100,8 @@ io.on('connection', function (socket) {
 		//clearInterval(playerInterval);
 		//socket.emit('disconnected');
 		game.players = game.players.filter(player => player.id !== socket.id);
-		// console.log('user disconnected! ' + socket.id);
-		// console.log('number of players: ' + game.players.length);
+		console.log('user disconnected! ' + socket.id);
+		console.log('number of players: ' + game.players.length);
 	})
 
 	socket.on('PLAYER_DIRECTION_UPDATE', function (data) {
